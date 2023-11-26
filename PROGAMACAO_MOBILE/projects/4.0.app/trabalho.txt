@@ -1,0 +1,10 @@
+
+1- criar tela com listagem de itens (autores com 2 atributos)
+
+2- botao salvar
+3- abrir forms
+4- telas 
+
+
+5- documentacao flutter
+6- stackover flow
