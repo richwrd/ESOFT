@@ -1,0 +1,142 @@
+/* Navigation Bar */
+.navbar.navbar-default.navbar-fixed-top{
+    padding: 5px 15px 5px;
+    background-color: #44677a;
+    transition: all ease 0.4s;
+    margin: -8px -8px -8px;
+}
+
+
+/* TEXT BARRA NAVEGAÇÃO */
+#navbar-texto {
+    padding: 5px 5px;
+    font-size: 40px;
+    color: rgb(243, 147, 38);
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+#navbar-texto:hover{
+    padding: 5px 5px;
+    background-color: #08fa9d;
+}
+
+
+/* TAMANHO ICONE NAVEGACAO */
+.navicones{
+    width: 30px;
+    height: auto;
+}
+
+a{
+    color: #f56511;
+    text-decoration:none;
+    cursor: pointer;
+}
+
+
+/* POSICAO BOTOES DIREITA */
+ul.nav.navbar-nav.navbar-right {
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+
+ul.nav.navbar-nav.navbar-right a{
+    color: black;
+}
+
+
+
+
+
+
+
+.btn.btn-primary{
+    background-color: #5c28e9;
+    color:black;
+    border: 2px solid rgb(243, 38, 243);
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: lighter;
+    transition-duration: 0.2s;
+}
+
+.btn.btn-primary:hover{
+    background-color: rgb(243, 147, 38);
+    color:black;
+    border: 2px solid rgb(243, 147, 38);
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+
+.form-control input{
+    padding: 5px;
+}
+
+.form-checkbox input {
+    margin-left: 10px;
+}
+
+.voltar{
+    margin-top: 15px;
+}
+
+
+/*botoes botstrap*/
+
+
+.btn {
+    margin-right: 0.5rem !important
+}
+
+.btn {
+    font-size: 0.875rem;
+    line-height: 1;
+    font-weight: 400;
+    padding: .7rem 1.5rem;
+    border-radius: 0.1275rem
+}
+
+.container {
+    margin-top: 10px
+}
+
+.toast {
+    transition: 0.32s all ease-in-out
+}
+
+.toast-container--fade {
+    right: 0;
+    bottom: 0
+}
+
+.toast-container--fade .toast-wrapper {
+    display: inline-block
+}
+
+.toast.fade-init {
+    opacity: 0
+}
+
+.toast.fade-show {
+    opacity: 1
+}
+
+.toast.fade-hide {
+    opacity: 0
+}

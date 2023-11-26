@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+
+body {
+    font-family:'Sen', sans-serif;  
+}
+
+.section{
+    min-height: 100vh;
+}
+
+
+#person {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: rgb(255, 255, 255);
+}
+
+.person-content {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    background: rgb(0, 0, 0);
+}
+
+
+.person-content div h1{
+    color: transparent;
+
+    padding: 0px 4px;  
+
+    font-size: 4.5rem;
+    line-height: 6rem;
+
+    animation: written-text 2s ease forwards;
+}
+
+
+.person-content div h1:nth-child(1){
+    animation-delay: 0.5s;
+}
+
+.person-content div h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+.person-content div h1:nth-child(3){
+    animation: written-text_nome 2s ease forwards;
+    animation-delay: 3s;
+}
+
+.person-blackground{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-image: url(./img/fundo_pg1.jpg);
+    background-size: cover;
+    background-position: top center;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.person-blackground::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    height: 100%;
+    width: 100%;
+
+    opacity: .7;
+
+    z-index: -1;
+
+    background: 
+        linear-gradient(270deg, transparent 40%, black),
+        /* linear-gradient(180deg, transparent 40%, black), */
+        linear-gradient(90deg, transparent 65%, black),
+        linear-gradient(0deg, transparent 40%, black);
+}
+
+.stacks-content{
+    opacity: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;    
+    animation: fadeIn 3s forwards;
+    animation-delay: 4.5s; 
+    margin-top: 6em;    
+}
+
+.stacks-content h3{
+    color:  rgb(55, 182, 20);
+    font-size: 2rem;
+
+    margin-block-end: 50px;
+    margin-top: 80px;
+}
+
+.stacks{
+
+    display: flex;
+
+    align-items: center;
+
+    flex-direction: row;
+}
+
+.stacks ul li {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    margin: 15px;
+    padding: 10px;
+
+    list-style: none;
+}
+
+
+.stacks ul li img {
+    width: 50px;
+    height: auto;
+
+    transition: transform .3s ease;
+}
+
+.stacks ul li div img{
+    transform: scale(1.2);
+    cursor: pointer;
+
+    transition: transform .3s ease;
+}
+
+.stacks ul li div img:hover{
+    transform:  scale(2);
+    cursor: pointer;
+
+}
+
+.links a{
+    cursor: auto;
+}
+
+.filtro-svg{
+    cursor: pointer;
+}
+
+.links img{
+    width: 40px;
+    height: 40px;
+
+    margin: 40px;
+    filter: brightness(.8);
+    transition: all .3s ease;
+}
+
+.links img:hover{
+    transform: scale(1.3);
+    filter: brightness(1);
+}
+
+.img-png{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    margin-top: 100px;
+}
+
+
+.img-png ul li{
+    list-style: none;
+    background: white;
+    border-radius: 50%;
+
+    -webkit-border-radius: 150px;
+    -webkit-box-shadow: 8px 8px 40px #666666, -8px -8px 40px #ffffff;
+    box-shadow: 8px 8px 40px #666666, -8px -8px 40px #ffffff;
+}
+
+.img-png ul li img{
+    width: 140px;
+    height: 120px;
+}
+.img-png ul li a:hover{
+    cursor: pointer;
+}
+
+.img-png:hover::after{
+    content: attr(data);
+    position: absolute;
+    
+    top: 50px;
+    left: 10px;
+
+    width: 20px;
+    height: 20px;
+
+    color: rgb(0, 0, 0);
+}
+
+.img-especial { 
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 240px !important;
+    width: 280px !important;
+
+}
+
+/* .img-especial:hover{
+    cursor: pointer;
+}
+
+.img-especial:hover::after{
+    content: attr(data);
+    position: absolute;
+    
+    top: 50px;
+    left: 10px;
+
+    width: 20px;
+    height: 20px;
+
+    color: white;
+} */
+
+.img-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper-profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 14px;
+    margin: 20px 15px;
+
+    border-radius: 50%;
+
+        background: 
+        radial-gradient(rgba(0,0,0,0.15) 60%, transparent 0),
+        radial-gradient(#000 68%, transparent 0),
+        linear-gradient(to top right, #ffa500, #ff1493 100%);
+}
+
+.profile-photo{
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+
+#postgres {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: rgb(0, 153, 255);
+}
+
+.postgres_tech{
+
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    background: rgb(0, 0, 0);
+
+}
+
+.postgres_background{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-image: url(./img/servidor.jpg);
+    background-size: cover;
+    background-position: top center;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.postgres_background::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    height: 100%;
+    width: 100%;
+
+    opacity: .7;
+
+    z-index: -1;
+
+    background: 
+        linear-gradient(270deg, transparent 40%, black),
+        /* linear-gradient(180deg, transparent 40%, black), */
+        linear-gradient(90deg, transparent 65%, black),
+        linear-gradient(0deg, transparent 40%, black);
+}
+
+
+
+#osgeo {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: rgb(0, 153, 255);
+}
+
+.osgeo_tech{
+
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    background: rgb(0, 0, 0);
+
+}
+
+.osgeo_background{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-image: url(./img/fundo5.jpg);
+    background-size: cover;
+    background-position: top center;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.osgeo_background::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    height: 100%;
+    width: 100%;
+
+    opacity: .7;
+
+    z-index: -1;
+
+    background: 
+        linear-gradient(270deg, transparent 40%, black),
+        /* linear-gradient(180deg, transparent 40%, black), */
+        linear-gradient(90deg, transparent 65%, black),
+        linear-gradient(0deg, transparent 40%, black);
+}
+
+
+.logo_page ul li img{
+    width: 70px;
+    height: auto;}
+
+@keyframes written-text {
+    100%{
+        color: rgb(255, 255, 255)
+    }
+}
+
+@keyframes written-text_nome {
+    100%{
+        color: rgb(55, 182, 20)
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}

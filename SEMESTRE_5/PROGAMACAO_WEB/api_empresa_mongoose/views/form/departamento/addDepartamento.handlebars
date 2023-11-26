@@ -1,0 +1,48 @@
+
+<form action="/departamento/create" method="POST">
+
+<div class="botao-espacamento">
+    <button class="botao-env" onclick="VoltarDepartamento()">Voltar</button>
+</div>
+
+    <div class="form-control">
+
+        <label for="denominacao">
+            Denominação:
+        </label>
+        <input type="text" name="denominacao" placeholder="Digite a Denominação.">
+
+    </div>
+
+    <div class="form-control">
+        <label for="empresa">EMPRESA:</label>
+        <select id="empresaSelect" name="empresa">
+            <option value="">Selecione...</option>
+                {{#each empresa}}
+                <option value="{{this._id}}">{{this.denominacao}}</option>
+                {{/each}}
+        </select>
+    </div>
+
+    <div class="form-control">
+        <label for="gerente">GERENTE:</label>
+        <select id="gerenteSelect" name="gerente">
+            <option value="">Selecione...</option>
+                {{#each gerente}}
+                <option value="{{this._id}}">{{this.denominacao}}</option>
+                {{/each}}
+        </select>
+    </div>
+
+
+    <div class="botao-espacamento">
+        <button type="submit" class="botao-env">Cadastrar</button>
+    </div>
+
+</form>
+
+<script>
+    function VoltarDepartamento() {
+        window.location.href = './list';
+    }
+</script>

@@ -1,0 +1,62 @@
+<div class="botao-espacamento">
+    <button class="botao-env" onclick="VoltarColaborador()">Voltar</button>
+</div>
+
+
+
+<div class="cargos-list">
+
+<div class="botao-espacamento"> 
+    <button class="botao-env" onclick="addColaborador()">Adicionar Colaborador</button>
+</div>
+
+<table>
+	<thead>
+		<tr>
+			<td>NOME</td> 
+            <td>SOBRENOME</td>
+            <td>CPF</td>
+            <td>CARGO</td>
+            <td>DEPARTAMENTO</td>
+            <td>OPÇÕES</td>
+        </tr>
+	</thead>
+
+	<tbody>
+
+        {{#each colaborador}}
+            <tr>
+                <td><a id="textlink" href="view/{{this._id}}">{{this.nome}}</a></td>
+                <td>{{this.sobrenome}}</td>
+                <td>{{this.cpf}}</td>
+                <td>{{this.cargo.denominacao}}</td>
+                <td>{{this.departamento.denominacao}}</td>
+                <td class="actions">
+                    <div>
+                        <a id="textlink" href="edit/{{this._id}}">Editar</a>
+                    </div>
+
+                    <div>
+                        <a id="textlink" href="remove/{{this._id}}">Remover</a>
+                    </div>
+                </td>
+            </tr>    
+        {{/each}}
+
+	</tbody>
+
+</table>
+
+
+</div>
+
+<script>
+    function VoltarColaborador() {
+        window.location.href = '../';
+    }
+
+
+    function addColaborador() {
+        window.location.href = 'create';
+    }
+</script>

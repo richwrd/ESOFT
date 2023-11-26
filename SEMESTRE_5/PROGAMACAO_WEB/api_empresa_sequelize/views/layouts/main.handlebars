@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="{{{iconpage}}}" type="image/x-icon">
+    <title>{{{page}}}</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+</head>
+<body>  
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+        
+            <img class="navicones" src="{{{iconpage}}}" alt="Icone Navegacao">
+            <a id="navbar-texto">{{{page}}}</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="resNav">
+            <ul class="nav navbar-nav navbar-right">
+                <button type="btn" class="btn btn-primary"><a href="/">Home</a></button>
+                <button type="btn" class="btn btn-primary"><a href="/config">Configurações</a></button>
+                <button type="btn" class="btn btn-primary"><a href="/about">Sobre</a></button>
+            </ul>
+        </div>
+    </nav> 
+
+
+    <body>
+        {{{body}}}
+    </body>
+
+    <footer>
+        <p>
+            Rodapé
+        </p>
+    </footer>
+
+    
+    <script src="/css/style.js"></script>  
+</body>
+</html>

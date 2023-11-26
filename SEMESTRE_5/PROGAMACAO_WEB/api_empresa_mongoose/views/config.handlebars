@@ -1,0 +1,22 @@
+<h1>PAINEL ADMINISTRATIVO</h1>
+
+
+
+<div class="card_config">
+    
+    <button class="botao-env" onclick="addUser()">Adicionar Usuário</button>
+
+    <button class="botao-env" onclick="listAllUsers()">Listar todos</button>
+
+</div>
+        
+
+<script>
+    function listAllUsers() {
+        window.location.href = 'users/list';
+    }
+
+    function addUser() {
+        window.location.href = 'users/create';
+    }
+</script>

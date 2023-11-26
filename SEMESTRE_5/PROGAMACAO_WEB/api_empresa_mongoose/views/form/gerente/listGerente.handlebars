@@ -1,0 +1,58 @@
+<div class="botao-espacamento">
+    <button class="botao-env" onclick="VoltarGerente()">Voltar</button>
+</div>
+
+
+
+<div class="cargos-list">
+
+<div class="botao-espacamento"> 
+    <button class="botao-env" onclick="addGerente()">Adicionar Gerente</button>
+</div>
+
+<table>
+	<thead>
+		<tr>
+			<td>DENOMINAÇÃO</td> 
+            <td>NÍVEL</td>
+            <td>COLABORADOR</td>
+            <td>OPÇÕES</td>
+        </tr>
+	</thead>
+
+	<tbody>
+
+        {{#each gerente}}
+            <tr>
+                <td>{{this.denominacao}}</td>
+                <td>{{this.nivel}}</td>
+                <td>{{this.colaborador.nome}}</td>
+                <td class="actions">
+                    <div>
+                        <a id="textlink" href="edit/{{this._id}}">Editar</a>
+                    </div>
+
+                    <div>
+                        <a id="textlink" href="remove/{{this._id}}">Remover</a>
+                    </div>
+                </td>
+            </tr>    
+        {{/each}}
+
+	</tbody>
+
+</table>
+
+
+</div>
+
+<script>
+    function VoltarGerente() {
+        window.location.href = '../';
+    }
+
+
+    function addGerente() {
+        window.location.href = 'create';
+    }
+</script>

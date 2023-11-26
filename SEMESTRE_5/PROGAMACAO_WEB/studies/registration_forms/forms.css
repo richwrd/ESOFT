@@ -1,0 +1,48 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #26ff00;          /* Define a cor do texto */
+    font-size: 24px;        /* Define o tamanho da fonte */
+    font-weight: bold;      /* Define o estilo do texto */
+    margin-bottom: 10px;    /* Define a margem inferior */
+}
+
+label {
+    color: #f1ed00c6;
+    font-size: 20px;           
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 50%;
+    height: 30px;
+    margin-top: 18px;
+    padding: 5px;
+}
+
+input[type="submit"]{
+    font-size: 50px;
+    width: 250px;
+    height: 100px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 10px;
+    padding: auto;
+    border: none;
+    cursor: pointer;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: auto;
+}

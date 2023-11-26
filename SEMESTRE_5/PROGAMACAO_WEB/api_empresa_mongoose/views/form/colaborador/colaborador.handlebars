@@ -1,0 +1,72 @@
+
+<div class="botao-espacamento">
+    <button class="botao-env" onclick="VoltarColaborador()">Voltar</button>
+</div>
+
+
+    <div>
+
+        <div class="data-box">
+            <div class="data-title">NOME</div>
+            <div>{{colaborador.nome}}</div>
+        </div>
+
+        <div class="data-box">
+            <div class="data-title">SOBRENOME</div>
+            <div>{{colaborador.sobrenome}}</div>
+        </div>
+
+        <div class="data-box">
+            <div class="data-title">CPF</div>
+            <div>{{colaborador.cpf}}</div>
+        </div>
+
+        <div class="data-box">
+            <div class="data-title">CARGO</div>
+            <div>{{colaborador.cargo.denominacao}}</div>
+        </div>
+
+        <div class="data-box">
+            <div class="data-title">DEPARTAMENTO</div>
+            <div>{{colaborador.departamento.denominacao}}</div>
+        </div>
+
+        <div class="data-box">
+            <div class="data-title">GERENTE RESPONSÁVEL</div>
+            <div>{{colaborador.departamento.gerente.denominacao}}</div>
+        </div>
+
+        <div class="botao-espacamento">
+            <a class="botao-env2" id="textlink" href="../edit/{{colaborador._id}}">Editar</a>
+        </div>
+
+        <div class="botao-espacamento">
+            <a class="botao-env2" id="textlink" href="../remove/{{colaborador._id}}">Remover</a>
+        </div>
+    </div>
+ 
+
+        <style>
+            .data-box {
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            .data-title {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+        </style>
+
+<script>
+    function VoltarColaborador() { 
+        window.location.href = '../list';
+    }
+
+
+    function addColaborador() {
+        window.location.href = 'create';
+    }
+</script>

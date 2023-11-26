@@ -1,0 +1,70 @@
+<h1>Editar USUARIO</h1>
+
+<form action="/colaborador/edit" method="POST">
+
+<input type="hidden" name="id" value="{{colaborador._id}}">
+
+<div class="botao-espacamento">
+    <button class="botao-env" onclick="VoltarCargo()">Voltar</button>
+</div>
+
+    <div class="form-control">
+
+        <label for="nome">
+            Nome:
+        </label>
+        <input type="text" name="nome" placeholder="Digite o nome do Colaborador." value="{{colaborador.nome}}">
+
+    </div>
+
+    <div class="form-control">
+
+        <label for="sobrenome">
+            Sobrenome:
+        </label>
+        <input type="text" name="sobrenome" placeholder="Digite o sobrenome do Colaborador." value="{{colaborador.sobrenome}}">
+
+    </div>
+
+    <div class="form-control">
+
+        <label for="cpf">
+            CPF:
+        </label>
+        <input type="text" name="cpf" placeholder="Digite o CPF do Colaborador." value="{{colaborador.cpf}}">
+
+    </div>
+
+    <div class="form-control">
+        <label for="cargo">CARGO:</label>
+        <select id="cargoSelect" name="cargo">
+            <option value="{{colaborador.cargo._id}}">{{colaborador.cargo.denominacao}}</option>
+                {{#each cargo}}
+                <option value="{{this._id}}">{{this.denominacao}}</option>
+                {{/each}}
+        </select>
+    </div>
+
+    <div class="form-control">
+        <label for="departamento">DEPARTAMENTO:</label>
+        <select id="departamentoSelect" name="departamento">
+            <option value="{{colaborador.departamento._id}}">{{colaborador.departamento.denominacao}}</option>
+                {{#each departamento}}
+                    <option value="{{this._id}}">{{this.denominacao}}</option>
+                {{/each}}
+        </select>
+    </div>
+
+
+    <div class="botao-espacamento">
+        <button type="submit" class="botao-env">Atualizar</button>
+    </div>
+
+
+</form>
+
+<script>
+    function VoltarCargo() {
+        window.location.href = './list';
+    }
+</script>

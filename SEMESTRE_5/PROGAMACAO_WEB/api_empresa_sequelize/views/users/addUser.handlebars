@@ -1,0 +1,40 @@
+<h1>PAINEL ADMINISTRATIVO</h1>
+
+{{#if auth}}
+
+<p>Você esta autenticado! <a href="/products">clique aqui</a> para acessar os produtos </p>
+
+
+{{/if}}
+
+
+<form action="/users/create" method="POST">
+
+    <div class="form-control">
+
+        <label for="nome">
+            Nome do Usuario:
+        </label>
+        <input type="text" name="nome" placeholder="Digite o nome do usuário.">
+
+    </div>
+
+    <div class="form-control">
+
+        <label for="permissoes">
+            Permissões:
+        </label>
+        <input type="text" name="permissoes" placeholder="Digite o preço do produto">
+
+    </div>
+
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center"> 
+            <button type="submit" id="bouncebutton" class="btn btn-success btn-icon-text bouncebutton"> <i class="fa fa-check btn-icon-prepend"></i>Cadastrar</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+

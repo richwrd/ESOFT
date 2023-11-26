@@ -1,0 +1,34 @@
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+.form-checkbox {
+    flex-direction: row;
+}
+
+.form-control input,
+.form-control textarea {
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form input[type='submit']{
+    background-color: aquamarine;
+    padding: 0.7em 1.5em;
+    font-weight: bold;
+    color: rgb(243, 147, 38);
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration:none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}

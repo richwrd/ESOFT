@@ -1,0 +1,14 @@
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/crud
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/version.json
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin.json
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/richard/Documentos/PROJECTS/flutter/crud/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin

@@ -1,0 +1,43 @@
+<h1>Adicionar GERENTE</h1>
+
+
+<form action="/gerente/create" method="POST">
+
+<div class="voltar">
+    <button class="botao-env" onclick="Voltar()">Voltar</button>
+</div>
+
+
+    <div class="form-control">
+
+        <label for="denominacao">
+            Denominação:
+        </label>
+        <input type="text" name="denominacao" placeholder="Digite a denominação do Gerente.">
+
+    </div>
+
+    <div class="form-control">
+
+        <label for="nivel">
+            Nível:
+        </label>
+        <input type="text" name="nivel" placeholder="Digite o nível do Gerente.">
+
+    </div>
+
+    <div class="form-control">
+        <label for="colaborador">Colaborador:</label>
+        <select id="colaboradorSelect" name="colaborador">
+            <option value="">Selecione...</option>
+                {{#each colaborador}}
+                <option value="{{this._id}}">{{this.nome}}</option>
+                {{/each}}
+        </select>
+    </div>
+
+    <div class="botao-espacamento">
+        <button type="submit" class="botao-env">Cadastrar</button>
+    </div>
+
+</form>

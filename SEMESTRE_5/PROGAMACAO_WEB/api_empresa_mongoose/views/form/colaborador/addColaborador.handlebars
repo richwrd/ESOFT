@@ -1,0 +1,61 @@
+
+<form action="/colaborador/create" method="POST">
+
+<div class="voltar">
+    <button class="botao-env" onclick="Voltar()">Voltar</button>
+</div>
+
+
+    <div class="form-control">
+
+        <label for="nome">
+            Nome:
+        </label>
+        <input type="text" name="nome" placeholder="Digite o nome do Colaborador.">
+
+    </div>
+
+    <div class="form-control">
+
+        <label for="sobrenome">
+            Sobrenome:
+        </label>
+        <input type="text" name="sobrenome" placeholder="Digite o sobrenome do Colaborador.">
+
+    </div>
+
+    <div class="form-control">
+
+        <label for="cpf">
+            CPF:
+        </label>
+        <input type="text" name="cpf" placeholder="Digite o CPF do Colaborador.">
+
+    </div>
+
+    <div class="form-control">
+        <label for="cargo">CARGO:</label>
+        <select id="cargoSelect" name="cargo">
+            <option value="">Selecione...</option>
+                {{#each cargo}}
+                <option value="{{this._id}}">{{this.denominacao}}</option>
+                {{/each}}
+        </select>
+    </div>
+
+    <div class="form-control">
+        <label for="departamento">DEPARTAMENTO:</label>
+        <select id="departamentoSelect" name="departamento">
+            <option value="">Selecione...</option>
+                {{#each departamento}}
+                <option value="{{this._id}}">{{this.denominacao}}</option>
+                {{/each}}
+        </select>
+    </div>
+
+
+    <div class="botao-espacamento">
+        <button type="submit" class="botao-env">Cadastrar</button>
+    </div>
+
+</form>

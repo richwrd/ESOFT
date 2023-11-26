@@ -1,0 +1,49 @@
+
+<form action="/departamento/edit" method="POST">
+
+<input type="hidden" name="id" value="{{departamento._id}}">
+
+<div class="botao-espacamento">
+    <button class="botao-env" onclick="VoltarDepartamento()">Voltar</button>
+</div>
+
+    <div class="form-control">
+
+        <label for="denominacao">
+            Denominação:
+        </label>
+        <input type="text" name="denominacao" placeholder="Digite a Denominação." value="{{departamento.denominacao}}">
+
+    </div>
+
+    <div class="form-control">
+        <label for="empresa">EMPRESA:</label>
+        <select id="empresaSelect" name="empresa">
+            <option value="{{departamento.empresa._id}}">{{departamento.empresa.denominacao}}</option>
+                {{#each empresa}}
+                <option value="{{this._id}}">{{this.denominacao}}</option>
+                {{/each}}
+        </select>
+    </div>
+
+    <div class="form-control">
+        <label for="gerente">GERENTE:</label>
+        <select id="gerenteSelect" name="gerente">
+            <option value="{{departamento.gerente._id}}">{{departamento.gerente.denominacao}}</option>
+                {{#each gerente}}
+                <option value="{{this._id}}">{{this.denominacao}}</option>
+                {{/each}}
+        </select>
+    </div>
+
+    <div class="botao-espacamento">
+        <button type="submit" class="botao-env">Atualizar</button>
+    </div>
+
+</form>
+
+<script>
+    function VoltarDepartamento() {
+        window.location.href = './list';
+    }
+</script>

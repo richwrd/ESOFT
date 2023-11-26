@@ -1,0 +1,52 @@
+<div class="voltar">
+    <button class="botao-env" onclick="Voltar()">Voltar</button>
+</div>
+
+
+<div class="users-list">
+
+
+<table>
+	<thead>
+		<tr>
+            <td>FOTO</td>
+			<td>NOME</td>
+            <td>SOBRENOME</td>
+            <td>PERMISSOES</td>
+            <td>OPÇÕES</td>
+        </tr>
+	</thead>
+
+	<tbody>
+
+        {{#each users}}
+            <tr>
+                <td><img class="imagem-usuario" src="{{this.image}}" alt="{{this.image}}"></td>
+                <td>{{this.nome}}</td>
+                <td>{{this.sobrenome}}</td>
+                <td>{{this.permissoes}}</td>
+                <td class="actions">
+                    <div>
+                        <a id="textlink" href="edit/{{this._id}}">Editar</a>
+                    </div>
+
+                    <div>
+                        <a id="textlink" href="remove/{{this._id}}">Remover</a>
+                    </div>
+                </td>
+            </tr>    
+        {{/each}}
+
+	</tbody>
+
+</table>
+
+
+</div>
+
+
+<script>
+    function Voltar() {
+        window.location.href = '../config';
+    }
+</script>

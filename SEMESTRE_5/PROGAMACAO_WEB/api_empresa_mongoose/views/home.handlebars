@@ -1,0 +1,62 @@
+<h1>Olá {{user.name}}!</h1>
+<h2>Seja bem vindo!</h2>
+<br>
+<p></p>
+
+{{#if auth}}
+
+<p>Você esta autenticado! <a href="/products">clique aqui</a> para acessar  </p>
+
+
+{{/if}}
+
+    <div class="cards_opcoes">
+
+        <ul>
+            <li>
+                <a href="/empresa/list" class="btn btn-primary">  
+                    <img class="card-img" src="img/empresa.png">
+                    EMPRESAS
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="/departamento/list" class="btn btn-primary">  
+                    <img class="card-img" src="img/departamento.png">
+                    DEPARTAMENTOS
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="/gerente/list" class="btn btn-primary">
+                    <img class="card-img" src="img/gerente.png">
+                    GERENTES
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="/colaborador/list" class="btn btn-primary">  
+                    <img class="card-img" src="img/colaborador.png">
+                    COLABORADORES
+                </a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <a href="/cargo/list" class="btn btn-primary">
+                    <img class="card-img" src="img/users.png">
+                    CARGOS
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+

@@ -1,0 +1,32 @@
+<h1>Editar EMPRESA</h1>
+
+<form action="/empresa/edit" method="POST">
+
+<input type="hidden" name="id" value="{{empresa._id}}">
+
+<div class="botao-espacamento">
+    <button class="botao-env" onclick="VoltarEmpresa()">Voltar</button>
+</div>
+
+
+    <div class="form-control">
+
+        <label for="denominacao">
+            Denominacao:
+        </label>
+        <input type="text" name="denominacao" placeholder="Digite o nome da Empresa" value="{{empresa.denominacao}}">
+
+    </div>
+
+
+    <div class="botao-espacamento">
+        <button type="submit" class="botao-env">Atualizar</button>
+    </div>
+</form>
+
+
+<script>
+    function VoltarEmpresa() {
+        window.location.href = './list';
+    }
+</script>

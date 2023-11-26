@@ -1,0 +1,58 @@
+<div class="botao-espacamento">
+    <button class="botao-env" onclick="VoltarCargo()">Voltar</button>
+</div>
+
+
+
+<div class="cargos-list">
+
+<div class="botao-espacamento"> 
+    <button class="botao-env" onclick="addCargo()">Adicionar Departamento</button>
+</div>
+
+<table>
+	<thead>
+		<tr>
+			<td>DENOMINAÇÃO</td> 
+            <td>EMPRESA</td>
+            <td>GERENTE</td>
+            <td>OPÇÕES</td>
+        </tr>
+	</thead>
+
+	<tbody>
+
+        {{#each departamento}}
+            <tr>
+                <td>{{this.denominacao}}</td>
+                <td>{{this.empresa.denominacao}}</td>
+                <td>{{this.gerente.denominacao}}</td>
+                <td class="actions">
+                    <div>
+                        <a id="textlink" href="edit/{{this._id}}">Editar</a>
+                    </div>
+
+                    <div>
+                        <a id="textlink" href="remove/{{this._id}}">Remover</a>
+                    </div>
+                </td>
+            </tr>    
+        {{/each}}
+
+	</tbody>
+
+</table>
+
+
+</div>
+
+<script>
+    function VoltarCargo() {
+        window.location.href = '../';
+    }
+
+
+    function addCargo() {
+        window.location.href = 'create';
+    }
+</script>

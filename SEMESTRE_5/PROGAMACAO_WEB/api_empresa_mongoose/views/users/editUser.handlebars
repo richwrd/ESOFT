@@ -1,0 +1,52 @@
+<h1>Editar USUARIO</h1>
+
+<form action="/users/edit" method="POST">
+
+<input type="hidden" name="id" value="{{users._id}}">
+
+    <div class="form-control">
+
+        <label for="name">
+            Nome do Usuário:
+        </label>
+        <input type="text" name="nome" placeholder="Digite o nome do usuário" value="{{users.nome}}">
+
+    </div>
+
+    <div class="form-control">
+
+        <label for="name">
+            Sobrenome:
+        </label>
+        <input type="text" name="sobrenome" placeholder="Digite o sobrenome" value="{{users.sobrenome}}">
+
+    </div>
+
+
+    <div class="form-control">
+
+        <label for="price">
+            Permissoes:
+        </label>
+        <input type="text" name="permissoes" placeholder="Digite as permissoes no sistema" value="{{users.permissoes}}">
+
+    </div>
+
+    <div class="form-control">
+
+        <label for="price">
+            Foto:
+        </label>
+        <input type="text" name="image" placeholder="URL Imagem" value="{{users.image}}">
+
+    </div>
+
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center"> 
+            <button type="submit" id="bouncebutton" class="btn btn-success btn-icon-text bouncebutton"> <i class="fa fa-check btn-icon-prepend"></i>Atualizar</button>
+            </div>
+        </div>
+    </div>
+</form>
+

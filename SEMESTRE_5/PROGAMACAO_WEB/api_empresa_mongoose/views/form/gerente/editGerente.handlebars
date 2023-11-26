@@ -1,0 +1,50 @@
+<h1>Editar GERENTE</h1>
+
+<form action="/gerente/edit" method="POST">
+
+<input type="hidden" name="id" value="{{gerente._id}}">
+
+<div class="botao-espacamento">
+    <button class="botao-env" onclick="VoltarGerente()">Voltar</button>
+</div>
+
+
+    <div class="form-control">
+
+        <label for="denominacao">
+            Denominacao:
+        </label>
+        <input type="text" name="denominacao" placeholder="Digite o sobrenome" value="{{gerente.denominacao}}">
+
+    </div>
+
+    <div class="form-control">
+
+        <label for="nivel">
+            Nível:
+        </label>
+        <input type="text" name="nivel" placeholder="Digite o nível do Gerente." value="{{gerente.nivel}}">
+
+    </div>
+
+    <div class="form-control">
+        <label for="colaborador">Colaborador:</label>
+        <select id="colaboradorSelect" name="colaborador" value="{{gerente.colaborador.nome}}">
+            <option value="{{gerente.colaborador._id}}">{{gerente.colaborador.nome}}</option>
+                {{#each colaborador}}
+                <option value="{{this._id}}">{{this.nome}} {{this.sobrenome}}</option>
+                {{/each}}
+        </select>
+    </div>
+
+    <div class="botao-espacamento">
+        <button type="submit" class="botao-env">Atualizar</button>
+    </div>
+
+</form>
+
+<script>
+    function VoltarGerente() {
+        window.location.href = './list';
+    }
+</script>

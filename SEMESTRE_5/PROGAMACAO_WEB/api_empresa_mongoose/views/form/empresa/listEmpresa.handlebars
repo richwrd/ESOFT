@@ -1,0 +1,54 @@
+<div class="botao-espacamento">
+    <button class="botao-env" onclick="VoltarEmpresa()">Voltar</button>
+</div>
+
+
+
+<div class="empresa-list">
+
+<div class="botao-espacamento"> 
+    <button class="botao-env" onclick="addEmpresa()">Adicionar Empresa</button>
+</div>
+
+<table>
+	<thead>
+		<tr>
+			<td>DENOMINAÇÃO</td> 
+            <td>OPÇÕES</td>
+        </tr>
+	</thead>
+
+	<tbody>
+
+        {{#each empresa }}
+            <tr>
+                <td>{{this.denominacao}}</td>
+                <td class="actions">
+                    <div>
+                        <a id="textlink" href="edit/{{this._id}}">Editar</a>
+                    </div>
+
+                    <div>
+                        <a id="textlink" href="remove/{{this._id}}">Remover</a>
+                    </div>
+                </td>
+            </tr>    
+        {{/each}}
+
+	</tbody>
+
+</table>
+
+
+</div>
+
+<script>
+    function VoltarEmpresa() {
+        window.location.href = '../';
+    }
+
+
+    function addEmpresa() {
+        window.location.href = 'create';
+    }
+</script>

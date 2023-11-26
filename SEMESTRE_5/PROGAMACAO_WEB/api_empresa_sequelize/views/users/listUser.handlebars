@@ -1,0 +1,26 @@
+<div class="voltar">
+    <button class="botao-env" onclick="Voltar()">Voltar</button>
+</div>
+
+
+<div class="users-list">
+
+    {{#each users}}
+        <div class="users">
+            <h3>Código: {{this.idkey}}</h3>
+            <h3>Nome: {{this.nome}}</h3>
+            <p>Permissoes: {{this.permissoes}}</p>
+
+            <div class="actions">
+                <a id="textlink" href="edit/{{this.idkey}}">Editar</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+
+<script>
+    function Voltar() {
+        window.location.href = '../config';
+    }
+</script>
