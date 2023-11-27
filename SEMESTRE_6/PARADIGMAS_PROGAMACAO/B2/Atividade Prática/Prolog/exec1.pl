@@ -1,12 +1,25 @@
-% FATOS 
+% Fatos
 
 passaro(joao).
 peixe(pedro).
 minhoca(maria).
-gato(chucknoris).
+gato(chuck_noris).
 
+% gosta
 gosta(passaro, minhoca).
-gosta(gatos, peixe).
-gosta(gatos, passaro).
+gosta(gato, peixe).
+gosta(gato, passaro).
 
+amigos(X, Y) :- gato(X), gato(Y).
+
+come(X, Y) :- gato(X), gosta(X, Y), not(pessoa(Y)).
+
+% Fatos adicionais
+
+pessoa(joao). 
+
+% Fatos específicos para Chuck Noris
+
+nome_gato(chuck_noris, "Chuck Noris").
+meu_gato(chuck_noris).
 
