@@ -1,0 +1,17 @@
+Manutenção de Software
+- Processos ageis
+- Modelo de Manutenção
+- Migração de sistemas
+
+- Reengenharia (refatorar)
+- Reconstruir sistema (todas as a telas)
+
+- Engenharia Reversa
+- Analisar o software
+
+- Refatoração
+- Modificar para melhorar
+
+- Manutenção é cara!
+
+
