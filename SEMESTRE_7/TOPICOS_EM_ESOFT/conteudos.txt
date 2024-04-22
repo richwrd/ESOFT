@@ -1,0 +1,45 @@
+-> Entendimento da base
+-> Análise descritiva
+-> Pre-processamento
+
+
+
+
+
+
+
+-> Base numerica
+
+
+categorica 
+  
+  * ordinal
+    -junior
+    -pleno
+    -senior
+  
+  * moda 
+    - oque mais se repete
+    
+  * nominal
+    - estado
+    - regiao
+    - sexo
+
+
+numerica
+
+  * continua
+    - idade
+  
+  * média
+    - ponto fora da mediana, não pode usar a média pois irá puxar pra cima
+  * mediana
+    - pode usar sem erro.
+
+  * discreta
+
+
+
+
+percentil (divide a tabela inteira como porcentagem, a fim de encontrar a mediana 50%)

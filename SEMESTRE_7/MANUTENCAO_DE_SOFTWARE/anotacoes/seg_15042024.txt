@@ -1,0 +1,43 @@
+- tipos de manutencao
+	- preventiva
+	- corretiva
+	- adaptatia
+	- evolutiva
+	
+Relações entre as manutenções pag. 27
+
+as Leis de Lehman 
+	- anos 60/70
+	- 8 leis
+	
+lei da mudança continua
+
+	- assim como um automovel precisa de revisões regulares para continuar rodando, um software precisa ser constantemente atualizado para continuar atendendo as necessidades de seus usuarios e aos padroes de tecnologia.
+	
+lei da complexidade crescente
+
+	- a medida que adicionamos mais funcionalidades a um software, como adicionar cômodos a uma casa, sua estrutura geral tende a se tornar mais complexa.
+
+lei da auto regulação
+
+	- a evolucao do software segue um equilibrio, semelhante a cadeia alimentar com predadores e presas.
+	
+let da estabilidade organizacional
+
+lei da conservação da familiaridade 
+
+lei do crescimento contínuo
+
+lei da diminuição da qualidade
+
+lei da adaptação do feedback
+	- sempre recebendo feedback para melhorar o software, sempre que escuta um feedback analisa e desenvolve
+	
+----------------------------------------------------------------
+
+
+
+	
+
+
+
