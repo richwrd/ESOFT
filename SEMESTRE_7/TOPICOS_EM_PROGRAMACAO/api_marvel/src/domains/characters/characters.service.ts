@@ -66,7 +66,7 @@ export class CharacterService {
     return this.characterModel.find().exec();
   }
 
-  async findOne(id: number): Promise<Character> {
+  async findOne(id: string): Promise<Character> {
     const character = await this.characterModel.findById(id).exec();
     if (!character) {
       throw new NotFoundException(`Personagem com o ID ${id} não encontrado`);
@@ -74,7 +74,7 @@ export class CharacterService {
     return character;
   }
 
-  async update(id: number, updateCharacterDto: UpdateCharacterDto): Promise<Character> {
+  async update(id: string, updateCharacterDto: UpdateCharacterDto): Promise<Character> {
     const existingCharacter = await this.characterModel.findByIdAndUpdate(id, updateCharacterDto, { new: true }).exec();
     if (!existingCharacter) {
       throw new NotFoundException(`Personagem com o ID ${id} não encontrado`);
@@ -82,7 +82,7 @@ export class CharacterService {
     return existingCharacter;
   }
 
-  async remove(id: number): Promise<Character> {
+  async remove(id: string): Promise<Character> {
     const deletedCharacter = await this.characterModel.findByIdAndDelete(id).exec();
     if (!deletedCharacter) {
       throw new NotFoundException(`Personagem com o ID ${id} não encontrado`);

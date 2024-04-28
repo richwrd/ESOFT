@@ -26,7 +26,7 @@ export class CharacterController {
   }
 
   @Get(':id')
-  async findOne(@Param('id', ParseIntPipe) id: number): Promise<Character> {
+  async findOne(@Param('id', ParseIntPipe) id: string): Promise<Character> {
     try {
       return await this.characterService.findOne(id);
     } catch (error) {
@@ -35,7 +35,7 @@ export class CharacterController {
   }
 
   @Patch(':id')
-  async update(@Param('id', ParseIntPipe) id: number, @Body(new ValidationPipe()) updateCharacterDto: UpdateCharacterDto): Promise<Character> {
+  async update(@Param('id', ParseIntPipe) id: string, @Body(new ValidationPipe()) updateCharacterDto: UpdateCharacterDto): Promise<Character> {
     try {
       return await this.characterService.update(id, updateCharacterDto);
     } catch (error) {
@@ -44,7 +44,7 @@ export class CharacterController {
   }
 
   @Delete(':id')
-  async remove(@Param('id', ParseIntPipe) id: number): Promise<Character> {
+  async remove(@Param('id', ParseIntPipe) id: string): Promise<Character> {
     try {
       return await this.characterService.remove(id);
     } catch (error) {
