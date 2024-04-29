@@ -1,10 +1,13 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument } from 'mongoose';
+import { HydratedDocument, Types  } from 'mongoose';
 
-export type CharacterSchemaDocument = HydratedDocument<Character>;
+import { Series } from '../../series/schemas/series.schema';
+
+export type CharactersSchemaDocument = HydratedDocument<Characters>;
+
 
 @Schema()
-export class Character {
+export class Characters {
     @Prop({ required: true, unique: true })
     id: number;
 
@@ -16,6 +19,9 @@ export class Character {
 
     @Prop()
     thumbnail: string;
+
+    @Prop({ type: [Types.ObjectId], ref: 'Series' })
+    series: Series[];
 }
 
-export const CharacterSchema = SchemaFactory.createForClass(Character);
+export const CharactersSchema = SchemaFactory.createForClass(Characters);

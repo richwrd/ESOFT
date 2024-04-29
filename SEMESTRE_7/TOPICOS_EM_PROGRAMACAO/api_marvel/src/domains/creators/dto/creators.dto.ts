@@ -25,17 +25,21 @@ export class IsImageConstraint implements ValidatorConstraintInterface {
   }
 }
 
-export class CreateSeriesDto {
-
+export class CreateCreatorsDto {
   @IsInt()
   id: number;
-  
-  @IsString()
-  title: string;
-  
-  @IsString()
-  description: string;
 
+  
+  @IsString()
+  firtName: string;
+  
+  @IsString()
+  middleName: string;
+  
+  @IsString()
+  lastName: string;
+  
+  
   @IsString()
   @IsOptional() // Tornando o campo opcional
   @Validate(IsImageConstraint, [100]) // 50MB max size
@@ -44,40 +48,34 @@ export class CreateSeriesDto {
   @IsOptional() // Tornando o campo opcional
   @IsArray()
   @IsString({ each: true }) // Cada item do array deve ser uma string
-  characters: string[];
-
-  @IsOptional() // Tornando o campo opcional
-  @IsArray()
-  @IsString({ each: true }) // Cada item do array deve ser uma string
-  comics: string[];
+  series: string[];
 }
 
 
-export class UpdateSeriesDto {
+export class UpdateCreatorsDto {
   @IsOptional() // O campo é opcional, pois é um DTO de atualização
   @IsInt()
   id: number;
 
   @IsOptional() // O campo é opcional, pois é um DTO de atualização
   @IsString()
-  title: string;
-
+  firtName: string;
+  
   @IsOptional() // O campo é opcional, pois é um DTO de atualização
   @IsString()
-  description: string;
-
+  middleName: string;
+  
   @IsOptional() // O campo é opcional, pois é um DTO de atualização
   @IsString()
-  @Validate(IsImageConstraint, [100]) // 100MB max size
+  lastName: string;
+  
+  @IsString()
+  @IsOptional() // Tornando o campo opcional
+  @Validate(IsImageConstraint, [100]) // 50MB max size
   thumbnail: string;
 
   @IsOptional() // Tornando o campo opcional
   @IsArray()
   @IsString({ each: true }) // Cada item do array deve ser uma string
-  characters: string[];
-
-  @IsOptional() // Tornando o campo opcional
-  @IsArray()
-  @IsString({ each: true }) // Cada item do array deve ser uma string
-  comics: string[];
+  series: string[];
 }

@@ -1,0 +1,355 @@
+[
+  {
+    "id": 26480,
+    "title": "Guardians of the Galaxy (2019)",
+    "description": null,
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/26480",
+    "urls": [
+      {
+        "type": "detail",
+        "url": "http://marvel.com/comics/series/26480/guardians_of_the_galaxy_2019?utm_campaign=apiRef&utm_source=301ac69228b3825873ef4ed25ce1cb38"
+      }
+    ],
+    "startYear": 2019,
+    "endYear": 2019,
+    "rating": "",
+    "type": "limited",
+    "modified": "2020-07-27T15:12:27-0400",
+    "thumbnail": {
+      "path": "http://i.annihil.us/u/prod/marvel/i/mg/5/e0/5c3fb0c908006",
+      "extension": "jpg"
+    },
+    "creators": {
+      "available": 30,
+      "collectionURI": "http://gateway.marvel.com/v1/public/series/26480/creators",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12208",
+          "name": "Arthur Adams",
+          "role": "inker (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13679",
+          "name": "Jean-Francious Beaulieu",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13180",
+          "name": "Federico Blee",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/426",
+          "name": "Jason Keith",
+          "role": "colorist (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13537",
+          "name": "Dylan Burnett",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11930",
+          "name": "Tradd Moore",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/447",
+          "name": "Victor Olazaba",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1082",
+          "name": "Ariel Olivetti",
+          "role": "inker"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13031",
+          "name": "Juann Cabal",
+          "role": "penciler"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/1141",
+          "name": "Giuseppe Camuncoli",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11435",
+          "name": "Mike Henderson",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13138",
+          "name": "In-Hyuk Lee",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/11610",
+          "name": "David Marquez",
+          "role": "penciler (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12712",
+          "name": "Donny Cates",
+          "role": "writer"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13021",
+          "name": "David Curiel",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/428",
+          "name": "Antonio Fabela",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/872",
+          "name": "Marte Gracia",
+          "role": "colorist"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/10432",
+          "name": "Dave Johnson",
+          "role": "painter (cover)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/13127",
+          "name": "Emily Newcomen",
+          "role": "editor"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/creators/12980",
+          "name": "Vc Cory Petit",
+          "role": "letterer"
+        }
+      ],
+      "returned": 20
+    },
+    "characters": {
+      "available": 4,
+      "collectionURI": "http://gateway.marvel.com/v1/public/series/26480/characters",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011299",
+          "name": "Guardians of the Galaxy"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011482",
+          "name": "Hela"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010744",
+          "name": "Rocket Raccoon"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009652",
+          "name": "Thanos"
+        }
+      ],
+      "returned": 4
+    },
+    "stories": {
+      "available": 40,
+      "collectionURI": "http://gateway.marvel.com/v1/public/series/26480/stories",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163646",
+          "name": "cover from Guardians of the Galaxy (2019) #1",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163647",
+          "name": "story from Guardians of the Galaxy (2019) #1",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163648",
+          "name": "cover from Guardians of the Galaxy (2019) #2",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163649",
+          "name": "story from Guardians of the Galaxy (2019) #2",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163650",
+          "name": "cover from Guardians of the Galaxy (2019) #3",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163651",
+          "name": "story from Guardians of the Galaxy (2019) #3",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163652",
+          "name": "cover from Guardians of the Galaxy (2019) #4",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163653",
+          "name": "story from Guardians of the Galaxy (2019) #4",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163654",
+          "name": "cover from Guardians of the Galaxy (2019) #5",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163655",
+          "name": "story from Guardians of the Galaxy (2019) #5",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163656",
+          "name": "cover from Guardians of the Galaxy (2019) #6",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163657",
+          "name": "story from Guardians of the Galaxy (2019) #6",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163658",
+          "name": "cover from Guardians of the Galaxy (2019) #7",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163659",
+          "name": "story from Guardians of the Galaxy (2019) #7",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163660",
+          "name": "cover from Guardians of the Galaxy (2019) #8",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163661",
+          "name": "story from Guardians of the Galaxy (2019) #8",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163662",
+          "name": "cover from Guardians of the Galaxy (2019) #9",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163663",
+          "name": "story from Guardians of the Galaxy (2019) #9",
+          "type": "interiorStory"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163664",
+          "name": "cover from Guardians of the Galaxy (2019) #10",
+          "type": "cover"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/stories/163665",
+          "name": "story from Guardians of the Galaxy (2019) #10",
+          "type": "interiorStory"
+        }
+      ],
+      "returned": 20
+    },
+    "comics": {
+      "available": 20,
+      "collectionURI": "http://gateway.marvel.com/v1/public/series/26480/comics",
+      "items": [
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73420",
+          "name": "Guardians of the Galaxy (2019) #1"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73421",
+          "name": "Guardians of the Galaxy (2019) #2"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73422",
+          "name": "Guardians of the Galaxy (2019) #3"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73423",
+          "name": "Guardians of the Galaxy (2019) #4"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73424",
+          "name": "Guardians of the Galaxy (2019) #5"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73425",
+          "name": "Guardians of the Galaxy (2019) #6"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73426",
+          "name": "Guardians of the Galaxy (2019) #7"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/77471",
+          "name": "Guardians of the Galaxy (2019) #7 (Variant)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73427",
+          "name": "Guardians of the Galaxy (2019) #8"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/81197",
+          "name": "Guardians of the Galaxy (2019) #8 (Variant)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/78044",
+          "name": "Guardians of the Galaxy (2019) #8 (Variant)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73428",
+          "name": "Guardians of the Galaxy (2019) #9"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/78243",
+          "name": "Guardians of the Galaxy (2019) #9 (Variant)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73429",
+          "name": "Guardians of the Galaxy (2019) #10"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/78316",
+          "name": "Guardians of the Galaxy (2019) #10 (Variant)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73430",
+          "name": "Guardians of the Galaxy (2019) #11"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/82475",
+          "name": "Guardians of the Galaxy (2019) #11 (Variant)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/73431",
+          "name": "Guardians of the Galaxy (2019) #12"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/83282",
+          "name": "Guardians of the Galaxy (2019) #12 (Variant)"
+        },
+        {
+          "resourceURI": "http://gateway.marvel.com/v1/public/comics/83283",
+          "name": "Guardians of the Galaxy (2019) #12 (Variant)"
+        }
+      ],
+      "returned": 20
+    },
+    "events": {
+      "available": 0,
+      "collectionURI": "http://gateway.marvel.com/v1/public/series/26480/events",
+      "items": [],
+      "returned": 0
+    },
+    "next": null,
+    "previous": null
+  }
+]

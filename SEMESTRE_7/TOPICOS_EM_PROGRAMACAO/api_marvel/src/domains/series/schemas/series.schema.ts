@@ -1,7 +1,8 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument } from 'mongoose';
+import { HydratedDocument, Types } from 'mongoose';
+
 import { Comics } from '../../comics/schemas/comics.schema'; // Importe o esquema Comic
-import { Character } from '../../characters/schemas/characters.schema'; // Importe o esquema Comic
+import { Characters } from '../../characters/schemas/characters.schema'; // Importe o esquema Comic
 
 
 export type SeriesSchemaDocument = HydratedDocument<Series>;
@@ -9,7 +10,7 @@ export type SeriesSchemaDocument = HydratedDocument<Series>;
 @Schema()
 export class Series {
         @Prop({ required: true, unique: true })
-        id: string;
+        id: number;
 
         @Prop()
         title: string;
@@ -20,10 +21,10 @@ export class Series {
         @Prop()
         thumbnail: string;
 
-        @Prop({ type: [{ type: String, ref: 'characters' }] }) // Referência para o esquema Character
-        characters: Character[];
-    
-        @Prop({ type: [{ type: String, ref: 'comics' }] }) // Referência para o esquema Comic
+        @Prop({ type: [{ type: String, ref: 'Characters' }] }) // Referência para o esquema Character
+        characters: Characters[];
+
+        @Prop({ type: [Types.ObjectId], ref: 'Comics' })
         comics: Comics[];
     }
 

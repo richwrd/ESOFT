@@ -52,10 +52,10 @@ export class SeriesController {
     }
   }
 
-  @Get('fetch')
-  async fetchSeriesApi(): Promise<Series[]> {
+  @Get('fetch/json')
+  async fetchAndSaveAllSeries(): Promise<void> {
     try {
-      return await this.seriesService.fetchSeriesApi();
+      return await this.seriesService.fetchAndSaveAllSeries();
     } catch (error) {
       // Trate o erro de forma apropriada, por exemplo, lançando uma exceção ou retornando uma resposta HTTP adequada
       throw new HttpException('Erro ao buscar as séries da API da Marvel', HttpStatus.INTERNAL_SERVER_ERROR);

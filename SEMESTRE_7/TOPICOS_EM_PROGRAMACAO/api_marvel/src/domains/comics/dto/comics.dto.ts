@@ -37,13 +37,8 @@ export class CreateComicsDto {
   
   @IsString()
   description: string;
+
   
-  // @IsDate()
-  // onsaleDate: Date;
-
-  // @IsNumber()
-  // price: number;
-
   @IsString()
   @IsOptional() // Tornando o campo opcional
   @Validate(IsImageConstraint, [100]) // 50MB max size
@@ -68,8 +63,4 @@ export class UpdateComicsDto {
   @IsString()
   @Validate(IsImageConstraint, [100]) // 100MB max size
   thumbnail: string;
-
-  @IsOptional() // O campo é opcional, pois é um DTO de atualização
-  @IsArray()
-  comics: any[];
 }

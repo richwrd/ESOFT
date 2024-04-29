@@ -27,7 +27,7 @@ export class IsImageConstraint implements ValidatorConstraintInterface {
   }
 }
 
-export class CreateCharacterDto {
+export class CreateCharactersDto {
   @IsInt()
   id: number;
 
@@ -44,10 +44,11 @@ export class CreateCharacterDto {
 
   @IsOptional() // Tornando o campo opcional
   @IsArray()
-  comic: any[];
+  @IsString({ each: true }) // Cada item do array deve ser uma string
+  series: string[];
 }
 
-export class UpdateCharacterDto {
+export class UpdateCharactersDto {
   @IsOptional() // O campo é opcional, pois é um DTO de atualização
   @IsInt()
   id: number;
@@ -67,5 +68,6 @@ export class UpdateCharacterDto {
 
   @IsOptional() // O campo é opcional, pois é um DTO de atualização
   @IsArray()
-  comics: any[];
+  @IsString({ each: true }) // Cada item do array deve ser uma string
+  series: string[];
 }

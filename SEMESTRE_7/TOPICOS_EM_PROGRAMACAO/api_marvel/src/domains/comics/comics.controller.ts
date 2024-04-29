@@ -51,4 +51,15 @@ export class ComicsController {
       throw new HttpException('Erro ao excluir o quadrinho', HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
+
+
+  @Get('fetch/json')
+  async fetchAndSaveAllComics(): Promise<void> {
+    try {
+      return await this.comicsService.fetchAndSaveAllComics();
+    } catch (error) {
+      // Trate o erro de forma apropriada, por exemplo, lançando uma exceção ou retornando uma resposta HTTP adequada
+      throw new HttpException('Erro ao buscar os personagens da API da Marvel', HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+  }
 }

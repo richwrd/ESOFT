@@ -1,23 +1,23 @@
 import { Controller, Get, Post, Put, Body, Patch, Param, Delete, ValidationPipe, ParseIntPipe, HttpException, HttpStatus } from '@nestjs/common';
-import { CharacterService } from './characters.service';
-import { CreateCharacterDto, UpdateCharacterDto } from './dto/characters.dto';
-import { Character } from './schemas/characters.schema';
+import { CharactersService } from './characters.service';
+import { CreateCharactersDto, UpdateCharactersDto } from './dto/characters.dto';
+import { Characters } from './schemas/characters.schema';
 
-@Controller('character')
-export class CharacterController {
-  constructor(private readonly characterService: CharacterService) {}
+@Controller('characters')
+export class CharactersController {
+  constructor(private readonly characterService: CharactersService) {}
 
   @Post()
-  async create(@Body(new ValidationPipe()) createCharacterDto: CreateCharacterDto): Promise<Character> {
+  async create(@Body(new ValidationPipe()) createCharactersDto: CreateCharactersDto): Promise<Characters> {
     try {
-      return await this.characterService.create(createCharacterDto);
+      return await this.characterService.create(createCharactersDto);
     } catch (error) {
       throw new HttpException('Erro ao criar o personagem', HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
 
   @Get()
-  async findAll(): Promise<Character[]> {
+  async findAll(): Promise<Characters[]> {
     try {
       return await this.characterService.findAll();
     } catch (error) {
@@ -25,8 +25,9 @@ export class CharacterController {
     }
   }
 
+
   @Get(':id')
-  async findOne(@Param('id', ParseIntPipe) id: string): Promise<Character> {
+  async findOne(@Param('id', ParseIntPipe) id: string): Promise<Characters> {
     try {
       return await this.characterService.findOne(id);
     } catch (error) {
@@ -35,16 +36,16 @@ export class CharacterController {
   }
 
   @Patch(':id')
-  async update(@Param('id', ParseIntPipe) id: string, @Body(new ValidationPipe()) updateCharacterDto: UpdateCharacterDto): Promise<Character> {
+  async update(@Param('id', ParseIntPipe) id: string, @Body(new ValidationPipe()) updateCharactersDto: UpdateCharactersDto): Promise<Characters> {
     try {
-      return await this.characterService.update(id, updateCharacterDto);
+      return await this.characterService.update(id, updateCharactersDto);
     } catch (error) {
       throw new HttpException('Erro ao atualizar o personagem', HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
 
   @Delete(':id')
-  async remove(@Param('id', ParseIntPipe) id: string): Promise<Character> {
+  async remove(@Param('id', ParseIntPipe) id: string): Promise<Characters> {
     try {
       return await this.characterService.remove(id);
     } catch (error) {
@@ -52,10 +53,10 @@ export class CharacterController {
     }
   }
   
-  @Get('fetch')
-  async fetchCharactersApi(): Promise<Character[]> {
+  @Get('fetch/json')
+  async fetchAndSaveAllCharacters(): Promise<void> {
     try {
-      return await this.characterService.fetchCharactersApi();
+      return await this.characterService.fetchAndSaveAllCharacters();
     } catch (error) {
       // Trate o erro de forma apropriada, por exemplo, lançando uma exceção ou retornando uma resposta HTTP adequada
       throw new HttpException('Erro ao buscar os personagens da API da Marvel', HttpStatus.INTERNAL_SERVER_ERROR);

@@ -1,11 +1,14 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { ConfigService } from '@nestjs/config';
 import axios from 'axios';
 
+import * as fs from 'fs';
 
-import { CreateCharacterDto, UpdateCharacterDto } from './dto/characters.dto';
-import { Character } from './schemas/characters.schema';
+
+import { CreateCharactersDto, UpdateCharactersDto } from './dto/characters.dto';
+import { Characters } from './schemas/characters.schema';
 
 
 const MARVEL_PUBLIC_KEY = process.env.MARVEL_PUBLIC_KEY;
@@ -17,56 +20,50 @@ const MARVEL_URL_CHARACTERS = process.env.MARVEL_URL_CHARACTERS;
 
 
 @Injectable()
-export class CharacterService {
-  constructor(@InjectModel(Character.name) private characterModel: Model<Character>) { }
+export class CharactersService {
+  constructor(@InjectModel(Characters.name) private characterModel: Model<Characters>, private configService: ConfigService,) { }
 
+  async fetchAndSaveAllCharacters(): Promise<void> {
 
-  async fetchCharactersApi(): Promise<Character[]> {
+    const limit = 100; // Limite por página
+    let offset = 0;
     try {
-      const existingCharacters = await this.characterModel.find().exec();
 
-      if (existingCharacters.length === 0) {
-        const response = await axios.get(`${MARVEL_URL_BASE}${MARVEL_URL_CHARACTERS}${MARVEL_API_KEY}`);
-        return this.createCharactersApi(response.data.data.results);
-      }
 
-      return existingCharacters;
+      const MARVEL_PUBLIC_KEY = this.configService.get<string>('MARVEL_PUBLIC_KEY');
+      const MARVEL_HASH_KEY = this.configService.get<string>('MARVEL_HASH_KEY');
+      const MARVEL_API_KEY = `?ts=1&apikey=${MARVEL_PUBLIC_KEY}&hash=${MARVEL_HASH_KEY}`;
+
+      const MARVEL_URL_BASE = this.configService.get<string>('MARVEL_URL_BASE');
+      const MARVEL_URL_CHARACTERS = this.configService.get<string>('MARVEL_URL_CHARACTERS');
+
+
+      const url = `${MARVEL_URL_BASE}${MARVEL_URL_CHARACTERS}${MARVEL_API_KEY}&offset=${offset}&limit=${limit}`;
+
+      console.log(url)
+      const response = await axios.get(url, { timeout: 3600000 });
+
+      const results = response.data.data.results;
+
+
+      // Salvar todos os dados das séries em um arquivo JSON
+      fs.writeFileSync('all_character.json', JSON.stringify(results, null, 2));
     } catch (error) {
-      throw new NotFoundException(`Error fetching characters: ${error.message}`);
-    }
-  }
-
-  async createCharactersApi(data): Promise<Character[]> {
-    const charactersToCreate = [];
-    try {
-      for (const characterData of data) {
-        const character = new this.characterModel({
-          id: characterData.id,
-          name: characterData.name,
-          description: characterData.description,
-          thumbnail: `${characterData.thumbnail.path}.${characterData.thumbnail.extension}`,
-          comics: [], // You might need to adjust this depending on how you fetch comics data
-        });
-        charactersToCreate.push(character);
-      }
-
-      return this.characterModel.create(charactersToCreate);
-    } catch (error) {
-      throw new NotFoundException(`Error creating characters: ${error.message}`);
+      console.error(`Erro ao buscar e salvar séries: ${error.message}`);
     }
   }
 
 
-  async create(createCharacterDto: CreateCharacterDto): Promise<Character> {
+  async create(createCharacterDto: CreateCharactersDto): Promise<Characters> {
     const createdCharacter = new this.characterModel(createCharacterDto);
     return createdCharacter.save();
   }
 
-  async findAll(): Promise<Character[]> {
+  async findAll(): Promise<Characters[]> {
     return this.characterModel.find().exec();
   }
 
-  async findOne(id: string): Promise<Character> {
+  async findOne(id: string): Promise<Characters> {
     const character = await this.characterModel.findById(id).exec();
     if (!character) {
       throw new NotFoundException(`Personagem com o ID ${id} não encontrado`);
@@ -74,7 +71,7 @@ export class CharacterService {
     return character;
   }
 
-  async update(id: string, updateCharacterDto: UpdateCharacterDto): Promise<Character> {
+  async update(id: string, updateCharacterDto: UpdateCharactersDto): Promise<Characters> {
     const existingCharacter = await this.characterModel.findByIdAndUpdate(id, updateCharacterDto, { new: true }).exec();
     if (!existingCharacter) {
       throw new NotFoundException(`Personagem com o ID ${id} não encontrado`);
@@ -82,7 +79,7 @@ export class CharacterService {
     return existingCharacter;
   }
 
-  async remove(id: string): Promise<Character> {
+  async remove(id: string): Promise<Characters> {
     const deletedCharacter = await this.characterModel.findByIdAndDelete(id).exec();
     if (!deletedCharacter) {
       throw new NotFoundException(`Personagem com o ID ${id} não encontrado`);

@@ -1,17 +1,20 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ConfigModule } from '@nestjs/config';
 
 
-import { Character, CharacterSchema } from './schemas/characters.schema';
-import { CharacterController } from './characters.controller';
-import { CharacterService } from './characters.service';
+import { Characters, CharactersSchema } from './schemas/characters.schema';
+import { CharactersController } from './characters.controller';
+import { CharactersService } from './characters.service';
 
+import { Series, SeriesSchema } from '../series/schemas/series.schema';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([{ name: Character.name, schema: CharacterSchema }]),
+    ConfigModule.forRoot(),
+    MongooseModule.forFeature([{ name: Characters.name, schema: CharactersSchema }, {name: Series.name, schema: SeriesSchema }]),
   ],
-  controllers: [CharacterController],
-  providers: [CharacterService],
+  controllers: [CharactersController],
+  providers: [CharactersService],
 })
 export class CharacterModule { }
